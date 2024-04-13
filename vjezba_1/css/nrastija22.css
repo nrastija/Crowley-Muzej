@@ -1,0 +1,497 @@
+body {
+    /*background-color: rgba(32, 81, 49, 0.4);*/
+    background-color: rgba(0, 77, 38, 0.3) !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+img {
+    &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
+
+}
+
+
+.header {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../resursi/slike/muzejPozadina.jpg);
+    background-size: cover;
+    background-position: center;
+
+
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+}
+
+#logo {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+footer {
+    text-align: center;
+    color:white;
+
+    img {
+        width: 70px;
+    }
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(../resursi/slike/muzejPozadina.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.header #logo {
+    display: block;
+    margin: auto;
+    width: 350px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+nav a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+
+    @media only screen and (min-width: 1200px) {
+        padding-right: 40px;
+    }
+
+    text-align: center;
+}
+
+.menuBar {
+    display: inline;
+    text-align: center;
+}
+
+.menuBar a:hover {
+    transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    color: black
+}
+
+.menuBarCurrent {
+    display: inline-block;
+    text-align: center;
+    background-clip: content-box;
+    background-color: rgba(17, 50, 44, 0.4);
+
+}
+
+.menuBarCurrent a:hover {
+    transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    color: black
+}
+
+/* CSS dio za index.html */
+
+#lokacija {
+    display: block;
+    font-size: 15px;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.lokacija {
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+}
+
+
+#mapa {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 80%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.pocetna-tekst {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: 50px;
+
+    .tekst {
+        text-align: center;
+    }
+
+    .slika {
+        display: flex;
+        justify-content: center;
+
+        img {
+            max-width: 70%;
+            max-height: 70%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 3px solid black;
+            border-radius: 5px;
+        }
+
+
+    }
+}
+
+.kalendar {
+    margin: 150px auto;
+    max-width: 800px;
+    font-family: serif;
+    font-weight: black;
+
+    table,
+    th,
+    td {
+        width: 100%;
+        table-layout: fixed;
+        text-align: center;
+        font-size: 27px;
+        border-collapse: collapse;
+        border: 5px solid black;
+        font-family: Elaphant;
+    }
+
+    tr,
+    th,
+    td {
+        padding: 15px;
+    }
+
+    th {
+        background: rgb(0, 0, 0, 0.3);
+        color: white;
+    }
+
+}
+
+.mjesec {
+    text-align: center;
+    background: rgb(256, 256, 256, 0.3);
+    font-size: 80px;
+    letter-spacing: 1px;
+    color: black;
+    border: 2px solid black;
+}
+
+.tablicaInformacija {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 8%;
+    padding-right: 7%;
+    padding-left: 7%;
+    padding-bottom: 0.5;
+
+    border-collapse: separate;
+    border-spacing: 5px;
+
+    th {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    tr {
+        text-align: justify;
+        line-height: 1.5;
+    }
+
+    td {
+        padding-top: 1.5%;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-bottom: 1%;
+
+
+        @media only screen and (min-width: 800px) {
+            &:nth-child(-n+2) {
+                border-right: 1px dashed black;
+            }
+        }
+
+    }
+
+    td img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+}
+
+.saznajteVise {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    nav {
+        display: grid;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .menuBar,
+    .menuBarCurrent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5px;
+        font-size: 15px;
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .header {
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    #logo {
+        width: 250px;
+    }
+
+
+    .pocetna-tekst {
+        grid-template-columns: 1fr;
+    }
+
+    .tablicaInformacija {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tablicaInformacija th,
+    .tablicaInformacija td {
+
+        padding: 10px;
+        font-size: 14px;
+        display: block;
+        width: 100%;
+    }
+
+    .tablicaInformacija tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .slika img {
+        margin-top: 20px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    #mapa {
+        width: 100%;
+    }
+
+    #lokacija {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .lokacija {
+        font-size: 18px;
+    }
+}
+
+
+/* CSS dio za oAutoru.html */
+
+.Autor {
+    @media only screen and (min-width: 1000px) {
+        display: flex;
+
+        margin: 50px auto;
+        width: 1000px;
+        padding: 20px;
+    }
+
+    p {
+
+        font-weight: bold;
+        font-size: xx-large;
+        margin-bottom: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+    }
+}
+
+.content {
+    ul {
+        list-style-type: none;
+    }
+
+    li {
+        margin-bottom: 20px;
+    }
+}
+
+.hobiji {
+    font-weight: 600;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .Autor {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    span {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+/* CSS dio za dokumentacija.html*/
+
+.dokumentacija {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+
+    td{
+        padding: 20px;
+    }
+
+    table, td{
+        border: 2px black solid;
+        width: 300px;
+    }
+
+    p {
+        margin-top: 100px;
+        font-size: xx-large;
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+    }
+
+    a {
+        font-size: large;
+        font-weight: 600;
+        color: black;
+        text-decoration: none;
+    }
+
+
+    li {
+        padding: 10px;
+        border: 1px dotted;
+        margin-bottom: 20px;
+    }
+
+    a:hover {
+        background-clip: content-box;
+        background-color: rgba(17, 50, 44, 0.4);
+    }
+
+    @media only screen and (max-width: 400px) {
+        table, td{
+            width: 200px;
+        }
+    }
+}
+
+/*
+<div class="kalendar">
+    <div class="mjesec">
+        <strong>TRAVANJ</strong>
+        <strong>2024.</strong>
+    </div>
+
+    <table>
+        <tr>
+            <th>Ned</th>
+            <th>Pon</th>
+            <th>Uto</th>
+            <th>Sri</th>
+            <th>Čet</th>
+            <th>Pet</th>
+            <th>Sub</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+        </tr>
+        <tr>
+            <td>28</td>
+            <td>29</td>
+            <td>30</td>
+        </tr>
+    </table>
+</div>
+*/
