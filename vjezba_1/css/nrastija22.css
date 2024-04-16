@@ -130,10 +130,10 @@ nav a {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     margin-top: 50px;
+    margin-left: 50px;
+    justify-content: space-between;
 
-    .tekst {
-        text-align: center;
-    }
+    
 
     .slika {
         display: flex;
@@ -146,10 +146,67 @@ nav a {
             border: 3px solid black;
             border-radius: 5px;
         }
-
-
     }
 }
+@media only screen and (min-width: 1300px) {
+.pocetna-tekst h2{
+    text-align: center;
+}
+.pocetna-tekst p{
+    margin-left: 30px;
+}
+}
+
+.tablicainformacija {
+    display: flex;
+    flex-wrap: wrap; 
+    margin: 0 auto; 
+    padding: 4%;
+  }
+  
+  .informacija {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  
+  .informacija h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .informacija img {
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .informacija p {
+    text-align: justify;
+    line-height: 1.5;
+  }
+  
+  
+  
+  @media only screen and (max-width: 1720px) {
+    .informacija {
+      width: 100%;
+    }
+    .pocetna-tekst h2{
+        text-align: center;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    .pocetna-tekst p{
+        margin:auto;
+    }
+  }
 
 .kalendar {
     margin: 150px auto;
@@ -191,55 +248,6 @@ nav a {
     border: 2px solid black;
 }
 
-.tablicaInformacija {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding-top: 8%;
-    padding-right: 7%;
-    padding-left: 7%;
-    padding-bottom: 0.5;
-
-    border-collapse: separate;
-    border-spacing: 5px;
-
-    th {
-        font-size: 25px;
-        text-align: center;
-    }
-
-    tr {
-        text-align: justify;
-        line-height: 1.5;
-    }
-
-    td {
-        padding-top: 1.5%;
-        padding-left: 2%;
-        padding-right: 2%;
-        padding-bottom: 1%;
-
-
-        @media only screen and (min-width: 800px) {
-            &:nth-child(-n+2) {
-                border-right: 1px dashed black;
-            }
-        }
-
-    }
-
-    td img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-    }
-}
-
 .saznajteVise {
     font-weight: bold;
     text-decoration: none;
@@ -247,7 +255,7 @@ nav a {
 }
 
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1300px) {
     nav {
         display: grid;
         gap: 5px;
@@ -268,7 +276,7 @@ nav a {
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1300px) {
     .header {
         padding: 5px;
         font-size: 20px;
@@ -282,26 +290,6 @@ nav a {
     .pocetna-tekst {
         grid-template-columns: 1fr;
     }
-
-    .tablicaInformacija {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .tablicaInformacija th,
-    .tablicaInformacija td {
-
-        padding: 10px;
-        font-size: 14px;
-        display: block;
-        width: 100%;
-    }
-
-    .tablicaInformacija tr {
-        display: flex;
-        flex-direction: column;
-    }
-
 
     .slika img {
         margin-top: 20px;
@@ -434,6 +422,120 @@ nav a {
     }
 }
 
+/* CSS dio za proizvod.html */
+
+#naslovobrazca{
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.obrazacProizvod{
+    display: flex;
+    flex-direction: column;
+    margin: 2px auto 50px auto;
+    gap: 10px;
+    padding: 30px 40px;
+    max-width: 500px;
+    background-color: rgb(215, 215, 215);
+    border-radius: 20px;
+
+    button{
+        grid-column: 2 / span 1;
+        height: 40px;
+    }
+    
+    label{
+         padding-top: 4px;
+    }
+
+    input, textarea{
+        background-color: white;
+
+        &:placeholder-shown{
+            background-color: rgb(236, 236, 236);
+        }
+        border-radius: 5px;
+        height: 25px;
+    }
+
+    textarea{
+        height: 10vh;
+    }
+
+}
+
+@media only screen and (max-width: 800px){
+    .obrazacProizvod{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        max-width: 600px;
+    }
+}
+
+/* CSS dio za galerija.html */
+.galerija {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%; 
+}
+
+.galerija img {
+  width: 550px; 
+  height: 440px;
+  display: block; 
+  margin: 0 auto; 
+  margin-bottom: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 3px solid black;
+  border-radius: 5px;
+
+}
+
+nav + p{
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+    margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 1690px){
+    .galerija {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%; 
+      }
+      
+      .galerija img {
+        width: 500px; 
+        display: block; 
+        margin: 0 auto; 
+        margin-bottom: 20px;
+      }
+}
+
+@media only screen and (max-width: 1050px){
+    .galerija {
+        display: flex;
+        flex-direction: column;
+        width: 100%; 
+      }
+      
+      .galerija img {
+        width: 500px; 
+        display: block; 
+        margin: 0 auto; 
+        margin-bottom: 20px;
+      }
+}
+
+
+/* 
 /*
 <div class="kalendar">
     <div class="mjesec">
