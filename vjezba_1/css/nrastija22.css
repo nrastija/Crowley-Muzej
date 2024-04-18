@@ -168,7 +168,7 @@ nav a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
+    width: 29%;
     margin: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -178,6 +178,7 @@ nav a {
   .informacija h2 {
     font-size: 20px;
     margin-bottom: 10px;
+    text-align: center;
   }
   
   .informacija img {
@@ -185,6 +186,9 @@ nav a {
     height: auto; 
     object-fit: cover;
     margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 2px solid gray;
+    border-radius: 5px;
   }
   
   .informacija p {
@@ -194,7 +198,7 @@ nav a {
   
   
   
-  @media only screen and (max-width: 1720px) {
+  @media only screen and (max-width: 1400px) {
     .informacija {
       width: 100%;
     }
@@ -534,8 +538,144 @@ nav + p{
       }
 }
 
+/* CSS za clanak1.html, clanak2.html i clanak3.html */
+.clanak{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-/* 
+    margin-bottom: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 2px auto 50px auto;
+    gap: 10px;
+    padding: 30px 40px;
+    max-width: 1200px;
+    background-color: rgb(215, 215, 215, 0.8);
+    border-radius: 20px;
+}
+
+.opisclanka{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 10px;
+}
+
+#naslovclanka{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#autorclanka{
+    font-size: large;
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+.glavnidio{
+    text-align: justify;
+    p{
+        margin-bottom: 50px;
+    }
+}
+
+.glavnidio iframe{
+    width: 70%;
+    height: 500px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.oznaceno{
+    font-weight: 700
+}
+
+@media only screen and (max-width: 1050px){
+    .glavnidio iframe{
+        width: 100%;
+    }
+}
+
+/* CSS kod za ponude.html*/
+.pozadinaprimjeraka{
+    margin: 2px auto 50px auto;
+    gap: 10px;
+    padding: 30px 40px;
+    max-width: 1200px;
+    background-color: rgb(215, 215, 215, 0.4);
+    border-radius: 20px;
+    
+    
+}
+
+.pozadinaprimjeraka h1{
+    text-align: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.tablicaprimjeraka{
+    text-align: center;
+    align-items: center;
+    margin:auto;
+
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    th, td {
+        border: 1px solid rgb(244, 244, 244, 0.8);
+        padding: 10px;
+        text-align: left;
+    }
+    
+    th {
+        background-color: rgb(215, 215, 215, 0.8);;
+    }
+}
+
+
+@media print {
+
+    body{
+        visibility: hidden;
+    }
+
+    .tablicaprimjeraka {
+        visibility: visible; 
+        position: absolute;
+        left: 0; 
+        top: 0;
+    }
+
+    .tablicaprimjeraka table,
+    .tablicaprimjeraka th,
+    .tablicaprimjeraka td {
+        border: 2px solid #000; /* Dodati okvir tablici, zaglavlju i ćelijama */
+        font-size: 12px; /* Postaviti veličinu fonta */
+    }
+
+}
+
+@media (max-width: 800px) {
+    .tablicaprimjeraka th:nth-child(2),
+    .tablicaprimjeraka td:nth-child(2) {
+        display: none;
+    }
+    
+    .tablicaprimjeraka th:nth-child(3),
+    .tablicaprimjeraka td:nth-child(3) {
+        display: none;
+    }
+}
+
+
+
 /*
 <div class="kalendar">
     <div class="mjesec">
