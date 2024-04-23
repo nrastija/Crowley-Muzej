@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <link rel="stylesheet" href="../css/nrastija22.css">
+ <link rel="stylesheet" href="../css/responzivnost.css">
+    <link rel="icon" href="../resursi/slike/logo.png">
+    <script src="../js/nrastija22.js"></script>
+    <meta charset="utf-8">
+    <meta name="Author" content="Niko Rastija">
+    <meta name="Description" content="Stranica sa obrascem za izlaganje proizvoda">
+    <meta name="Keywords" content="proizvod, izložba, kategorija, godina">
+    <title>Izlaganje proizvoda</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <a href="../index.html"><img id="logo" src="../resursi/slike/logo.png" alt="Logo stranice"></a>
+            <h1>Dobrošli na stranicu <br> Crowley Muzej</h1>
+        </div>
+
+    </header>
+
+    <nav>
+        <ul>
+            <li class="menuBar"><a href="../index.html">Početna</a></li>
+            
+            <li class="menuBar"><a href="eksponati.html">Izložbeni eksponati</a></li>
+            <li class="menuBar"><a href="galerija.html">Galerija slika</a></li>
+            <li class="menuBarCurrent"><a href="obrazac.html">Izlaganje proizvoda</a></li>
+            <li class="menuBar"><a href="oAutoru.html">O autoru</a></li>
+            <li class="menuBar"><a href="dokumentacija.html">Dokumentacija</a></li>
+
+        </ul>
+    </nav>
+
+    
+    <p id="naslovobrazca">Obrazac za izlaganje proizvoda</p>
+
+        <form class="obrazacProizvod" id="pocetakObrasca" action="https://spider.foi.hr/OWT/materijali/ispis_forme.php" method="post" enctype="multipart/form-data">
+            <label for="ime_prezime">Ime i prezime:</label>
+            <input type="text" id="ime_prezime" name="ime_prezime" required placeholder=" ">
+            <label for="naziv_proizvoda">Naziv proizvoda:</label>
+            <input type="text" id="naziv_proizvoda" name="naziv_proizvoda" required placeholder=" ">
+            <label for="opis_proizvoda">Opis proizvoda:</label>
+            <textarea id="opis_proizvoda" name="opis_proizvoda" placeholder=" "></textarea>
+            <label for="datum_preuzimanja">Unesite datum preuzimanja proizvoda: </label>
+            <input type="date" id="datum_preuzimanja" name="datum_preuzimanja">
+            <label for="kategorija">Kategorija proizvoda:</label>
+            <select id="kategorija" name="kategorija" >
+              <option value="oruzje">Oružje</option>
+              <option value="artefakt">Povijesni artefakt</option>
+              <option value="knjiga">Knjiga</option>
+              <option value="fotografija">Fotografija</option>
+            </select>
+            <label for="godina_proizvodnje">Godina proizvodnje (okvirno):</label>
+            <input type="number" id="godina_proizvodnje" name="godina_proizvodnje" placeholder=" " min="0" max="2024">
+            <label> Označite vrste izložbe u kojoj želite izložiti proizvod: </label>
+            <label for="opcija1">Općenito Domovinski rat: <input type="checkbox" id="opcija1" name="izlozba_domovinski_rat"></label>
+            <label for="opcija2">Oružja: <input type="checkbox" id="opcija2" name="izlozba_oruzja"> </label>
+            <label for="opcija3">Povijesna zbirka: <input type="checkbox" id="opcija3" name="izlozba_povijesnih_zbirki"></label>
+            <label for="materijal">Materijal proizvoda:</label>
+            <input type="text" id="materijal" name="materijal" placeholder=" ">
+            <label for="procjenjena_vrijednost">Procjenjena vrijednost u € (okvirno):</label>
+            <input type="number" id="procjenjena_vrijednost" required name="procjenjena_vrijednost" placeholder=" " min="0" max="1000000">
+            <label>Stanje proizvoda:</label>
+            <label for="odlicno"> Odlično <input type="radio" id="odlicno" value="odlicno" name="stanje"> </label>
+            <label for="dobro"> Dobro <input type="radio" id="dobro" value="dobro" name="stanje">  </label>
+            <label for="potrebno_restauriranje"> Potrebno restauriranje  <input type="radio" id="potrebno_restauriranje" value="potrebno_restauriranje" name="stanje"> </label>
+            <label for="datoteka">Fotografija proizvoda:</label>
+            <input type="file" id="datoteka" name="datoteka">
+            <label for="kontakt">Kontakt informacije:</label>
+            <input type="email" id="kontakt" name="kontakt" required placeholder=" ">
+            <label for="telefon">Telefonski broj (format: 09x-xxx-xxxx):</label>
+            <input type="tel" id="telefon" name="telefon" placeholder=" " pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            <button type="submit" value="slanjeupita">Pošalji upit</button>
+            <button type="reset" value="osvjezavanje">Osvjezi obrazac</button>
+          </form>
+
+
+    <footer>
+
+        <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en" target="_blank"><img
+                src="../resursi/slike/CC.png" alt="CC BY-NC-ND"></a>
+        <span class="footertext"> &copy; 2024. Niko Rastija</span>
+        <a href="https://validator.w3.org/check?uri=https://spider.foi.hr/OWT/2024/zadaca_01/nrastija22/html/obrazac.html" target="_blank"><img src="../resursi/slike/HTML5.png" alt="HTML5"></a>
+    </footer>
+
+</body>
+
+</html>
