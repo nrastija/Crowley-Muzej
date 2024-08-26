@@ -1,0 +1,62 @@
+[
+    {
+        "Naziv": "Ratna_uniforma",
+        "Opis": "Originalna vojna uniforma korištena tijekom Domovinskog rata.",
+        "Datum": "1991.",
+        "Autor": "Hrvatska vojska"
+    },
+    {
+        "Naziv": "Pješački_mitraljez",
+        "Opis": "Mitraljez korišten u borbenim operacijama tijekom ratnog razdoblja.",
+        "Datum": "1993.",
+        "Autor": "Muzejska zbirka"
+    },
+    {
+        "Naziv": "Ratna_fotografija",
+        "Opis": "Fotografija koja prikazuje vojnike u akciji tijekom Domovinskog rata.",
+        "Datum": "1992.",
+        "Autor": "Osobna donacija"
+    },
+    {
+        "Naziv": "Medalja_za_hrabrost",
+        "Opis": "Medalja dodijeljena vojniku za hrabrost i iznimne zasluge na bojištu.",
+        "Datum": "1995.",
+        "Autor": "Ministarstvo obrane RH"
+    },
+    {
+        "Naziv": "Zastava_postrojbe",
+        "Opis": "Originalna zastava 136. brigade koja je sudjelovala u oslobađanju gradova.",
+        "Datum": "1992.",
+        "Autor": "Članovi 136. brigade"
+    },
+    {
+        "Naziv": "Ratni_dnevnik",
+        "Opis": "Dnevnik vojnika s osobnim zapisima i refleksijama tijekom ratnih godina.",
+        "Datum": "1991.-1995.",
+        "Autor": "Anonimni donator"
+    },
+    {
+        "Naziv": "Spomenik_palim_borcima",
+        "Opis": "Model spomenika koji je postavljen u znak sjećanja na poginule vojnike.",
+        "Datum": "1996.",
+        "Autor": "Lokalna zajednica"
+    },
+    {
+        "Naziv": "Dr_Jerry_Blaskovich_-_Anatomija_prijevare",
+        "Opis": "Apstraktna skulptura iz 20. stoljeća.",
+        "Datum": "1998.",
+        "Autor": "Poklon Varaždinske gradske knjižnice"
+    },
+    {
+        "Naziv": "Ratna_umjetnost",
+        "Opis": "Slika koja prikazuje ratne scene i pejzaže tijekom Domovinskog rata.",
+        "Datum": "1994.",
+        "Autor": "Umjetnik Mario Kovačević"
+    },
+    {
+        "Naziv": "Povelja_zahvalnosti",
+        "Opis": "Povelja zahvalnosti dodijeljena jedinici za hrabrost i služenje domovini.",
+        "Datum": "1995.",
+        "Autor": "Predsjednik RH"
+    }
+]

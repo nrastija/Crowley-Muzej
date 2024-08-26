@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <title>Dinamična</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Matija Novak">
+</head>
+
+<body>

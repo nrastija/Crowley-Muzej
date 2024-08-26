@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <link rel="stylesheet" href="css/nrastija22.css">
+    <link rel="stylesheet" href="css/responzivnost.css">
+    <link rel="icon" href="slike/logo.png">
+    <script type="module" src="jsk/klijent/nrastija22_obrazac.js"></script>
+    <meta charset="utf-8">
+    <meta name="Author" content="Niko Rastija">
+    <meta name="Description" content="Stranica sa obrascem za izlaganje proizvoda">
+    <meta name="Keywords" content="proizvod, izložba, kategorija, godina">
+    <title>Izlaganje proizvoda</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <a href="/"><img id="logo" src="slike/logo.png" alt="Logo stranice"></a>
+            <h1>Dobrošli na stranicu <br> Crowley Muzej</h1>
+        </div>
+
+    </header>
+
+    <nav>
+        <ul>
+            <li class="menuBar"><a href="/">Početna</a></li>
+            
+            <li class="menuBar"><a href="/eks">Izložbeni eksponati</a></li>
+            <li class="menuBar"><a href="/gal">Galerija slika</a></li>
+            <li class="menuBarCurrent"><a href="/val">Obrazac validacije</a></li>
+            <li class="menuBar"><a href="/izl">Obrazac izlozbe</a></li>
+            <li class="menuBar"><a href="/oau">O autoru</a></li>
+            <li class="menuBar"><a href="/dok">Dokumentacija</a></li>
+            <li class="menuBar"><a href="/popis">Cjenik</a></li>
+            <li class="menuBar"><a href="/owt/izlozba">Izlozba</a></li>
+
+
+        </ul>
+    </nav>
+
+    
+    <p id="naslovobrazca">Obrazac validacije</p>
+
+        <form novalidate class="obrazacProizvod" id="pocetakObrasca" action="https://spider.foi.hr/OWT/materijali/ispis_forme.php" method="post" enctype="multipart/form-data">
+            <label for="ime_prezime">Ime i prezime:</label>
+            <input type="text" id="ime_prezime" name="ime_prezime" placeholder=" ">
+            <span class="error-message" id="ime_prezime_error"></span>
+
+            <label for="naziv_proizvoda">Naziv proizvoda:</label>
+            <input type="text" id="naziv_proizvoda" name="naziv_proizvoda" placeholder=" ">
+            <span class="error-message" id="naziv_proizvoda_error"></span>
+
+            <label for="opis_proizvoda">Opis proizvoda:</label>
+            <textarea id="opis_proizvoda" name="opis_proizvoda" placeholder=" "></textarea>
+            <span class="error-message" id="opis_proizvoda_error"></span>
+
+            <label for="datum_preuzimanja">Unesite datum preuzimanja proizvoda: </label>
+            <input type="date" id="datum_preuzimanja" name="datum_preuzimanja">
+            <span class="error-message" id="datum_preuzimanja_error"></span>
+
+            <label for="kategorija">Kategorija proizvoda:</label>
+            <select id="kategorija" name="kategorija" multiple>
+                <optgroup label="Vojna oprema" name="vojna_oprema">
+                    <option value="oruzje">Oružje</option>
+                    <option value="uniforma">Uniforma</option>
+                    <option value="oprema">Oprema</option>
+                </optgroup>
+                <optgroup label="Povijesni artefkati" name="povijesni_artefakti">
+                    <option value="artefakt">Povijesni artefakt</option>
+                    <option value="knjiga">Knjiga</option>
+                    <option value="fotografija">Fotografija</option>
+                </optgroup>
+            </select>
+            <span class="error-message" id="kategorija_error"></span>
+
+            <label for="godina_proizvodnje">Godina proizvodnje (okvirno):</label>
+            <input type="number" id="godina_proizvodnje" name="godina_proizvodnje" placeholder=" " min="0" max="2024">
+            <span class="error-message" id="godina_proizvodnje_error"></span>
+
+            <label> Označite vrste izložbe u kojoj želite izložiti proizvod: </label>
+            <div class="checkbox-group">
+                <label for="opcija1"><input type="checkbox" id="opcija1" name="izlozba_domovinski_rat"> Općenito Domovinski rat</label>
+                <label for="opcija2"><input type="checkbox" id="opcija2" name="izlozba_oruzja"> Oružja</label>
+                <label for="opcija3"><input type="checkbox" id="opcija3" name="izlozba_povijesnih_zbirki"> Povijesna zbirka</label>
+            </div>
+            <span class="error-message" id="izlozba_error"></span>
+
+            <label for="materijal">Materijal proizvoda:</label>
+            <input type="text" id="materijal" name="materijal" placeholder=" ">
+            <span class="error-message" id="materijal_error"></span>
+
+            <label for="procjenjena_vrijednost">Procjenjena vrijednost u € (okvirno):</label>
+            <input type="number" id="procjenjena_vrijednost" name="procjenjena_vrijednost" placeholder=" " min="0" max="1000000">
+            <span class="error-message" id="procjenjena_vrijednost_error"></span>
+
+            <label>Stanje proizvoda:</label>
+            <div class="radio-group">
+                <label for="odlicno"><input type="radio" id="odlicno" value="odlicno" name="stanje"> Odlično</label>
+                <label for="dobro"><input type="radio" id="dobro" value="dobro" name="stanje"> Dobro</label>
+                <label for="potrebno_restauriranje"><input type="radio" id="potrebno_restauriranje" value="potrebno_restauriranje" name="stanje"> Potrebno restauriranje</label>
+            </div>
+            <span class="error-message" id="stanje_error"></span>
+
+            <label for="datoteka">Fotografija proizvoda:</label>
+            <input type="file" id="datoteka" name="datoteka">
+            <span class="error-message" id="datoteka_error"></span>
+
+            <label for="kontakt">Kontakt informacije:</label>
+            <input type="email" id="kontakt" name="kontakt" placeholder=" ">
+            <span class="error-message" id="kontakt_error"></span>
+
+            <label for="telefon">Telefonski broj (format: 09x-xxx-xxxx):</label>
+            <input type="tel" id="telefon" name="telefon" placeholder=" " pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            <span class="error-message" id="telefon_error"></span>
+
+            <button type="submit" value="slanjeupita">Pošalji upit</button>
+            <button type="reset" value="osvjezavanje">Osvjezi obrazac</button>
+          </form>
+
+
+    <footer>
+
+        <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en" target="_blank"><img
+                src="slike/CC.png" alt="CC BY-NC-ND"></a>
+        <span class="footertext"> &copy; 2024. Niko Rastija</span>
+        <a href="https://validator.w3.org/check?uri=https://spider.foi.hr/OWT/2024/zadaca_01/nrastija22/html//val" target="_blank"><img src="slike/HTML5.png" alt="HTML5"></a>
+    </footer>
+
+</body>
+
+</html>

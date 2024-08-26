@@ -1,0 +1,634 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: rgba(0, 77, 38, 0.3) !important;
+}
+
+img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+
+.header {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(/slike/muzejPozadina.jpg);
+    background-size: cover;
+    background-position: center;
+
+
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+#logo {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+#logo:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    color:white;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(slike/muzejPozadina.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+footer img{
+    width: 70px;
+}
+
+footer.mx-2 {
+    margin-bottom: 4px; 
+}
+
+.header #logo {
+    display: block;
+    margin: auto;
+    width: 350px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+nav a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.menuBar {
+    display: inline-block;
+    text-align: center;
+    margin: 5px;
+}
+
+.menuBar a:hover {
+    transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: black;
+}
+
+.menuBarCurrent {
+    display: inline-block;
+    text-align: center;
+    background-clip: content-box;
+    background-color: rgba(17, 50, 44, 0.4);
+    margin: 5px;
+}
+
+.menuBarCurrent a:hover {
+    transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: black;
+}
+
+/* CSS za mobilnu/desktop verziju*/
+
+
+.mobile-version {
+    width: 50%;
+
+    nav {
+        display: grid;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .menuBar,
+    .menuBarCurrent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5px;
+        font-size: 15px;
+        padding-right: 0;
+    }
+
+    .informacija {
+        width: 100%;
+    }
+    .pocetna-tekst h2{
+        text-align: center;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    .pocetna-tekst p{
+        margin:auto;
+    }
+
+    .header {
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    #logo {
+        width: 250px;
+    }
+
+
+    .pocetna-tekst {
+        grid-template-columns: 1fr;
+    }
+
+    .slika img {
+        margin-top: 20px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    #mapa {
+        width: 100%;
+    }
+
+    #lokacija {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .lokacija {
+        font-size: 18px;
+    }
+
+    .Autor {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    span {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .obrazacProizvod{
+        display: flex;
+        flex-direction: column;
+    
+        max-width: 600px;
+    }
+
+    .galerija {
+        display: flex;
+        flex-direction: column;
+        width: 100%; 
+      }
+      
+      .galerija img {
+        width: 500px; 
+        display: block; 
+        margin: 0 auto; 
+        margin-bottom: 20px;
+      }
+
+      .glavnidio iframe{
+        width: 100%;
+    }
+
+    .tablicaprimjeraka th:nth-child(2),
+    .tablicaprimjeraka td:nth-child(2) {
+        display: none;
+    }
+    
+    .tablicaprimjeraka th:nth-child(3),
+    .tablicaprimjeraka td:nth-child(3) {
+        display: none;
+    }
+}
+
+.desktop-version {
+    width: 100%;
+}
+
+/* CSS dio za index.html */
+
+#lokacija {
+    display: block;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.lokacija {
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+}
+
+
+#mapa {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 80%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.pocetna-tekst {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 50px;
+    justify-content: space-between;
+}
+
+.gumbEkran{  
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.gumbEkran button{
+    height: 40px;
+    width: 30%;
+    background-color: rgba(213, 213, 214, 0.8);
+
+}
+
+.slika {
+    display: flex;
+    justify-content: center;
+}
+
+.slika img {
+    max-width: 70%;
+    max-height: 70%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+
+.saznajteVise {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+/* CSS dio za /oau */
+
+.Autor p {
+    font-weight: bold;
+    font-size: xx-large;
+    margin-bottom: 10px;
+}
+
+.Autor a {
+    text-decoration: none;
+     color: black;
+    font-weight: 600;
+}
+
+.content ul {
+    list-style-type: none;
+}
+
+.content li {
+        margin-bottom: 20px;
+    }
+
+.hobiji {
+    font-weight: 600;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CSS dio za /dok*/
+
+.dokumentacija {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.dokumentacija li ~ li{
+    border: 2px dotted white;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+#naslovdokumentacije{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.dokumentacija p {
+        margin-top: 100px;
+        font-size: xx-large;
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+    }
+
+.dokumentacija a {
+        overflow: hidden;
+        font-size: large;
+        font-weight: 600;
+        color: black;
+        text-decoration: none;
+    }
+
+
+.dokumentacija > li {
+        padding: 10px;
+        border: 2px dotted white;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+.dokumentacija a:hover {
+        background-clip: content-box;
+        background-color: rgba(17, 50, 44, 0.4);
+    }
+
+/* CSS dio za /val */
+
+#naslovobrazca{
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.obrazacProizvod {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 30px 40px;
+    max-width: 800px;
+    margin: 2px auto 50px auto;
+    background-color: rgb(215, 215, 215);
+    border-radius: 20px;
+}
+
+.obrazacProizvod label {
+    grid-column: 1 / span 1;
+    padding-top: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.obrazacProizvod input, 
+.obrazacProizvod select, 
+.obrazacProizvod textarea, 
+.obrazacProizvod button {
+    grid-column: 2 / span 1;
+    background-color: white;
+    border-radius: 5px;
+    height: 35px;
+    padding: 5px;
+}
+
+.obrazacProizvod input:placeholder-shown,
+.obrazacProizvod textarea:placeholder-shown {
+    background-color: rgb(236, 236, 236);
+}
+
+.obrazacProizvod textarea {
+    height: 10vh;
+}
+
+.obrazacProizvod select[id="kategorija"]{
+    height:150px;
+}
+
+.obrazacProizvod input[type="radio"],
+.obrazacProizvod input[type="checkbox"] {
+    grid-column: 2 / span 1;
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+    grid-column: 1 / span 1;
+}
+
+.obrazacProizvod input[type="file"] {
+    height: auto;
+    grid-column: 2 / span 1;
+}
+
+.obrazacProizvod .checkbox-group,
+.obrazacProizvod .radio-group {
+    grid-column: 2 / span 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.obrazacProizvod button {
+    grid-column: 2 / span 1;
+    height: 40px;
+}
+
+.error-message {
+    grid-column: 2 / span 1;
+    color: red;
+    font-size: 0.875em;
+    margin-top: -10px;
+}
+
+.label-error{
+    color:red;
+    font-weight: bold;
+}
+
+/* CSS dio za /gal */
+.galerija {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%; 
+}
+
+.slikagalerija{
+    width: 460px; 
+    height: 400px;
+    display: block; 
+    margin: 0 auto; 
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.galerija img {
+    width: 460px; 
+    height: 400px;
+    display: block; 
+    margin: 0 auto; 
+    margin-bottom: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 3px solid black;
+    border-radius: 5px;
+    position: relative;
+  }
+
+.overlay{
+    width: 102%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    text-shadow: 3px 3px 0 #000;
+    transform: skew(-10deg);
+}
+.slikagalerija:hover img {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+.overlay:hover{
+    opacity:1;
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+nav + p{
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+    margin-bottom: 100px;
+}
+
+/* CSS za clanak1.html, clanak2.html i clanak3.html */
+.clanak{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-bottom: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 2px auto 50px auto;
+    gap: 10px;
+    padding: 30px 40px;
+    max-width: 1200px;
+    background-color: rgb(215, 215, 215, 0.8);
+    border-radius: 20px;
+}
+
+.opisclanka{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 10px;
+}
+
+#naslovclanka{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#autorclanka{
+    font-size: large;
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+.glavnidio{
+    text-align: justify;
+}
+
+.glavnidio p{
+    margin-bottom: 50px;
+}
+
+.glavnidio iframe{
+    width: 70%;
+    height: 500px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.oznaceno{
+    font-weight: 700
+}
+
+
+/* CSS kod za /eks*/
+.pozadinaprimjeraka{
+    margin: 2px auto 50px auto;
+    gap: 10px;
+    padding: 30px 40px;
+    max-width: 1200px;
+    background-color: rgb(215, 215, 215, 0.4);
+    border-radius: 20px;
+    
+    
+}
+.tablicaprimjeraka{
+    text-align: center;
+    align-items: center;
+    margin:auto;
+}
+
+.tablicaprimjeraka caption{
+        text-align: center;
+        align-items: center;
+        margin-bottom: 50px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+ .tablicaprimjeraka  table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+ .tablicaprimjeraka  th, td {
+        border: 1px solid rgb(244, 244, 244, 0.8);
+        padding: 10px;
+        text-align: left;
+    }
+    
+.tablicaprimjeraka  th {
+        background-color: rgb(215, 215, 215, 0.8);;
+    }

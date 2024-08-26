@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <link rel="stylesheet" href="css/nrastija22.css">
+    <link rel="stylesheet" href="css/responzivnost.css">
+    <link rel="icon" href="slike/logo.png">
+    <meta charset="utf-8">
+    <meta name="Author" content="Niko Rastija">
+    <meta name="Description" content="Stranica sa obrascem za izlaganje proizvoda">
+    <meta name="Keywords" content="proizvod, izložba, kategorija, godina">
+    <title>Izlaganje proizvoda</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <a href="/"><img id="logo" src="slike/logo.png" alt="Logo stranice"></a>
+            <h1>Dobrošli na stranicu <br> Crowley Muzej</h1>
+        </div>
+
+    </header>
+
+    <nav>
+        <ul>
+            <li class="menuBar"><a href="/">Početna</a></li>
+            <script src="/jskekran"></script>
+            <li class="menuBar"><a href="/eks">Izložbeni eksponati</a></li>
+            <li class="menuBar"><a href="/gal">Galerija slika</a></li>
+            <li class="menuBar"><a href="/val">Obrazac validacije</a></li>
+            <li class="menuBarCurrent"><a href="/izl">Obrazac izlozbe</a></li>
+            <li class="menuBar"><a href="/oau">O autoru</a></li>
+            <li class="menuBar"><a href="/dok">Dokumentacija</a></li>
+            <li class="menuBar"><a href="/popis">Cjenik</a></li>
+            <li class="menuBar"><a href="/owt/izlozba">Izlozba</a></li>
+        </ul>
+    </nav>
+
+    
+    <form novalidate class="obrazacProizvod" id="pocetakObrasca" action="/owt/izlozba" method="post">
+        <label for="Naziv">Naziv proizvoda:</label>
+        <input type="text" id="Naziv" name="Naziv">
+    
+        <label for="Opis">Opis proizvoda:</label>
+        <textarea id="Opis" name="Opis"></textarea>
+    
+        <label for="Datum">Datum:</label>
+        <input type="number" id="Datum" name="Datum"  min="0" max="2024">
+    
+        <label for="Autor">Autor:</label>
+        <input type="text" id="Autor" name="Autor">
+    
+        <button type="submit" value="slanjeupita">Pošalji upit</button>
+        <button type="reset" value="osvjezavanje">Osvjezi obrazac</button>
+    </form>
+    
+
+
+    <footer>
+
+        <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en" target="_blank"><img
+                src="slike/CC.png" alt="CC BY-NC-ND"></a>
+        <span class="footertext"> &copy; 2024. Niko Rastija</span>
+        <a href="https://validator.w3.org/check?uri=https://spider.foi.hr/OWT/2024/zadaca_01/nrastija22/html//val" target="_blank"><img src="slike/HTML5.png" alt="HTML5"></a>
+    </footer>
+
+</body>
+
+</html>
