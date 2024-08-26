@@ -25,10 +25,11 @@ The project will deliver a fully functional web application with the following k
 
 **Accessibility and Performance**: Optimize the web application for performance and accessibility, adhering to best practices to ensure fast load times and inclusivity for all users.
 
-**Documentation and Testing**: Provide thorough documentation for both the code and the usage of the application. Implement comprehensive testing to ensure functionality, usability, and security are up to standard.
+**Testing**: Implement comprehensive testing to ensure functionality, usability, and security are up to standard.
 
 ## Task
-[PHASE 1.pdf](https://github.com/nrastija/PI/blob/69aa2ba4954782cabf5b9700a052828d44b31dd9/Zadatak%20-%20Gradski%20prijevoz.pdf)
-[PHASE 2.pdf](https://github.com/nrastija/PI/blob/69aa2ba4954782cabf5b9700a052828d44b31dd9/Zadatak%20-%20Gradski%20prijevoz.pdf)
+[PHASE 1.pdf](https://github.com/nrastija/OWT/blob/4f6e408892a2edbfdff76f4df8509fe23d4dea30/Zadac%CC%81a%201.pdf)
+<br>
+[PHASE 2.pdf](https://github.com/nrastija/OWT/blob/4f6e408892a2edbfdff76f4df8509fe23d4dea30/Zadac%CC%81a%202.pdf)
 ## Resources
-[Resource folder](https://github.com/nrastija/PI/tree/54d2b30e410a3031be4fe727f0196133c0c066d6/Documentation)
+[Resource folder](https://github.com/nrastija/OWT/tree/4f6e408892a2edbfdff76f4df8509fe23d4dea30/Resources)
